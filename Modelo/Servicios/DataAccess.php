@@ -1,7 +1,16 @@
 <?php
 
+/**
+ * [Description DataAccess]
+ * An instance class with a static param that stores an associative array of keys and the paths to files.
+ * Provides a widely generic approach to saving and reading JSON files containing structures that represent objects with their IDs,
+ * and a very specific approach for managing burgers based on the premise of the PDF included with this class.
+ */
 class DataAccess
 {
+    /**
+     * @var [type]
+     */
     private static $paths;
 
     /**
