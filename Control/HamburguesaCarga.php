@@ -1,5 +1,4 @@
 <?php
-require './Modelo/Clases/Burger.php';
 
 if(isset($_POST['amount']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['type']) && isset($_POST['dressing']))
 {

@@ -208,6 +208,7 @@ class DataAccess
 
     /**
      * Reads the corresponding file and returns an array of generic objects.
+     * Returns an array with the objects on success. Returns false on failing.
      * @param string $path
      * 
      * @return [type]
@@ -217,7 +218,7 @@ class DataAccess
      * 
      * @return [type]
      */
-    private function ReadObjectsFromFile(string $path)
+    public function ReadObjectsFromFile(string $path)
     {
         $path = $this->ReturnPath($path);
         if(file_exists($path))
@@ -226,7 +227,8 @@ class DataAccess
         }
         else
         {
-            die('No such file.');
+            echo 'No such file.'; 
+            return false;
         }
     }
 

@@ -9,6 +9,7 @@ class Sale
     public $amount;    
     public $date;
     public $dressing;
+    public $total;
 
     public function __construct(string $email, string $name, string $type, int $amount, string $dressing)
     {
@@ -18,6 +19,7 @@ class Sale
         $this->type = $type;
         $this->amount = $amount;
         $this->date = date("d/m/Y-H:i:s");
+        $this->total = 0;
     }
 }
 
